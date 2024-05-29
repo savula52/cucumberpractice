@@ -6,7 +6,7 @@ setDefaultTimeout(60 * 1000 * 2);
 
 Given('user navigates to specsaver home page', async function () {
  browser = await chromium.launch({headless: false, });
-  let context = await browser.newContext({ extraHTTPHeaders: { 'X-Security-Header': 'barrel-expert', },})
+  let context = await browser.newContext({ extraHTTPHeaders: { 'X-Security-Header': 'our header value', },})
   page = await context.newPage();
   await page.goto("https://qa-gb-luc-main.az.ssdgws.co.uk/");
   await console.log("launched homepage")
